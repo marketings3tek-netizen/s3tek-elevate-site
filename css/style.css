@@ -22,7 +22,7 @@ body{
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background-color: #000; /* Adjust color to fit your brand */
+  background-color: #ff6b00; /* Vivid Orange */
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -36,7 +36,7 @@ body{
 .cursor-outline {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.5); /* Adjust ring color */
+  border: 1px solid rgba(255, 107, 0, 0.6); /* Orange ring with opacity */
   border-radius: 50%;
   position: fixed;
   top: 0;
