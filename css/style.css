@@ -15,7 +15,8 @@ body{
   font-size:16px; line-height:1.65; transition:background .4s var(--ease),color .4s var(--ease);
   overflow-x:hidden;
 }
-cursor: default; /* Keeps standard pointer visible; change to 'none' to hide default arrow */
+.cursor{
+  cursor: default; /* Keeps standard pointer visible; change to 'none' to hide default arrow */
 }
 
 .cursor-dot {
