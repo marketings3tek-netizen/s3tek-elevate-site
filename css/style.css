@@ -40,14 +40,14 @@ section{padding:120px 0}
 /* ============ NAV ============ */
 .nav{
   position:fixed; top:0; left:0; right:0; z-index:1000; padding:18px 0;
-  background:transparent; /* Blends naturally with your dark hero section */
+  background:#0B0F19; /* Solid deep blue/navy matching your dark theme */
   transition:background .35s var(--ease),padding .35s var(--ease),border-color .35s var(--ease);
   border-bottom:1px solid transparent;
 }
 
-/* Subtle frosted glass when scrolling */
+/* Scrolled state with frosted glass effect over the deep blue base */
 .nav.scrolled{
-  background:rgba(11, 15, 25, 0.85); /* Matches hero dark tone */
+  background:rgba(11, 15, 25, 0.92); /* Same deep blue with 92% opacity */
   backdrop-filter:blur(12px); 
   padding:12px 0; 
   border-bottom:1px solid rgba(255, 255, 255, 0.08);
@@ -62,23 +62,18 @@ section{padding:120px 0}
   text-decoration:none;
 }
 
-/* Direct image scaling override */
-.brand img {
-  height: 110px !important;  /* Force a much larger height box */
-  max-height: none !important;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  margin-top: -15px;         /* Pulls it up slightly to balance the vertical alignment */
-  margin-bottom: -15px;      /* Prevents the nav bar height from stretching too tall */
-  transition: all .35s var(--ease);
+/* Clear transparent logo sizing */
+.brand img{
+  height:68px; /* High-impact logo size */
+  width:auto;  
+  object-fit:contain;
+  display:block;
+  transition:height .35s var(--ease);
 }
 
-/* Adjust scale when scrolled */
-.nav.scrolled .brand img {
-  height: 80px !important;
-  margin-top: -8px;
-  margin-bottom: -8px;
+/* Compact on scroll */
+.nav.scrolled .brand img{
+  height:52px;
 }
 
 /* ============ NAV LINKS & BUTTONS ============ */
@@ -92,6 +87,23 @@ section{padding:120px 0}
   display:inline-flex; align-items:center; gap:10px; padding:13px 26px; font-size:13px;
   letter-spacing:.05em; text-transform:uppercase; font-weight:700; border-radius:var(--radius);
   cursor:pointer; transition:all .3s var(--ease); white-space:nowrap;
+}
+
+/* ============ MOBILE RESPONSIVE FIXES ============ */
+@media (max-width: 768px) {
+  .brand img {
+    height: 48px !important; /* Scale down so it doesn't crowd mobile view */
+  }
+
+  .nav .btn, 
+  .nav-right .btn {
+    display: none; /* Hide heavy CTA button on small mobile screens */
+  }
+
+  .nav .wrap {
+    padding: 0 16px;
+    gap: 12px;
+  }
 }
 .btn-primary{background:var(--navy); color:#F7F3EA; border:1px solid var(--navy)}
 .btn-primary:hover{background:var(--accent-2); border-color:var(--accent-2); color:#fff; transform:translateY(-2px)}
