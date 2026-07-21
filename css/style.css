@@ -62,19 +62,23 @@ section{padding:120px 0}
   text-decoration:none;
 }
 
-/* Clear transparent logo sizing */
-/* Custom Logo Image Scaling */
+/* Direct image scaling override */
 .brand img {
-  height: 68px; /* Increased from 44px for a bold presence */
-  width: auto;  /* Locks aspect ratio */
+  height: 110px !important;  /* Force a much larger height box */
+  max-height: none !important;
+  width: auto;
   object-fit: contain;
   display: block;
-  transition: height .35s var(--ease);
+  margin-top: -15px;         /* Pulls it up slightly to balance the vertical alignment */
+  margin-bottom: -15px;      /* Prevents the nav bar height from stretching too tall */
+  transition: all .35s var(--ease);
 }
 
-/* Slightly compact when scrolling */
+/* Adjust scale when scrolled */
 .nav.scrolled .brand img {
-  height: 52px; /* Increased from 36px */
+  height: 80px !important;
+  margin-top: -8px;
+  margin-bottom: -8px;
 }
 
 /* ============ NAV LINKS & BUTTONS ============ */
