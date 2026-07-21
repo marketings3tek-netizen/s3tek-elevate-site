@@ -40,13 +40,45 @@ section{padding:120px 0}
 /* ============ NAV ============ */
 .nav{
   position:fixed; top:0; left:0; right:0; z-index:1000; padding:22px 0;
+  background:#000000; /* Pure black to blend with logo PNG background */
   transition:background .35s var(--ease),padding .35s var(--ease),border-color .35s var(--ease);
   border-bottom:1px solid transparent;
 }
-.nav.scrolled{background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(14px); padding:14px 0; border-bottom:1px solid var(--line)}
+.nav.scrolled{
+  background:rgba(0, 0, 0, 0.88); /* Dark frosted glass on scroll */
+  backdrop-filter:blur(14px); 
+  padding:14px 0; 
+  border-bottom:1px solid var(--line);
+}
 .nav .wrap{display:flex; align-items:center; justify-content:space-between}
-.brand{font-family:var(--font-display); font-size:21px; letter-spacing:.02em; color:var(--text)}
+
+/* ============ BRAND / LOGO STYLING ============ */
+.brand{
+  display:inline-flex; 
+  align-items:center; 
+  text-decoration:none;
+  font-family:var(--font-display); 
+  font-size:21px; 
+  letter-spacing:.02em; 
+  color:var(--text);
+}
 .brand b{color:var(--accent)}
+
+/* Custom Logo Image Scaling */
+.brand img{
+  height:64px; /* Increased height for visibility; adjust to 70px if needed */
+  width:auto;  /* Keeps image aspect ratio lock */
+  object-fit:contain;
+  display:block;
+  transition:height .35s var(--ease);
+}
+
+/* Shrink logo slightly when scrolled for a clean fixed header */
+.nav.scrolled .brand img{
+  height:48px;
+}
+
+/* ============ NAV LINKS & BUTTONS ============ */
 .nav-links{display:flex; align-items:center; gap:38px}
 .nav-links a{font-size:13.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--text-mute); position:relative; transition:color .25s}
 .nav-links a::after{content:''; position:absolute; left:0; bottom:-6px; width:0; height:1px; background:var(--accent-2); transition:width .3s var(--ease)}
