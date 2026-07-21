@@ -39,17 +39,20 @@ section{padding:120px 0}
 
 /* ============ NAV ============ */
 .nav{
-  position:fixed; top:0; left:0; right:0; z-index:1000; padding:22px 0;
-  background:#000000; /* Pure solid black to match logo background */
+  position:fixed; top:0; left:0; right:0; z-index:1000; padding:18px 0;
+  background:transparent; /* Blends naturally with your dark hero section */
   transition:background .35s var(--ease),padding .35s var(--ease),border-color .35s var(--ease);
   border-bottom:1px solid transparent;
 }
+
+/* Subtle frosted glass when scrolling */
 .nav.scrolled{
-  background:#000000; /* Keeps it 100% solid black when scrolling (NO transparency) */
-  backdrop-filter:none; 
+  background:rgba(11, 15, 25, 0.85); /* Matches hero dark tone */
+  backdrop-filter:blur(12px); 
   padding:12px 0; 
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid rgba(255, 255, 255, 0.08);
 }
+
 .nav .wrap{display:flex; align-items:center; justify-content:space-between}
 
 /* ============ BRAND / LOGO STYLING ============ */
@@ -57,25 +60,20 @@ section{padding:120px 0}
   display:inline-flex; 
   align-items:center; 
   text-decoration:none;
-  font-family:var(--font-display); 
-  font-size:21px; 
-  letter-spacing:.02em; 
-  color:var(--text);
 }
-.brand b{color:var(--accent)}
 
-/* Custom Logo Image Scaling */
+/* Clear transparent logo sizing */
 .brand img{
-  height:76px; /* Increased logo size for bold visibility */
-  width:auto;  /* Keeps image aspect ratio locked */
+  height:44px; /* Crisp, proportioned height for nav bar alignment */
+  width:auto;  
   object-fit:contain;
   display:block;
   transition:height .35s var(--ease);
 }
 
-/* Slightly compact logo on scroll while maintaining solid black backdrop */
+/* Slightly compact on scroll */
 .nav.scrolled .brand img{
-  height:58px;
+  height:36px;
 }
 
 /* ============ NAV LINKS & BUTTONS ============ */
