@@ -371,3 +371,32 @@ footer{border-top:1px solid var(--line); padding:70px 0 36px}
 .page-hero{padding:170px 0 70px}
 .page-hero h1{font-size:clamp(32px,4.4vw,52px)}
 .page-hero p{color:var(--text-mute); font-size:17px; max-width:600px; margin-top:18px}
+/* ============ MOBILE RESPONSIVE FIXES ============ */
+@media (max-width: 768px) {
+  
+  /* 1. Give the logo much more vertical and horizontal space */
+  .brand img {
+    height: 52px !important; /* Bumps up mobile logo size */
+    max-height: none !important;
+  }
+
+  /* 2. Hide or slim down the full CTA button on mobile so it stops squishing the logo */
+  .nav .btn, 
+  .nav-right .btn {
+    display: none; /* Recommended: Hide header CTA on mobile since you already have primary CTAs right below in the hero */
+  }
+
+  /* Alternative: If you MUST keep a button, make it a compact icon or smaller text */
+  /*
+  .nav .btn {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+  */
+
+  /* 3. Adjust spacing between logo and hamburger menu */
+  .nav .wrap {
+    padding: 0 16px;
+    gap: 12px;
+  }
+}
