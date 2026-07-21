@@ -56,26 +56,29 @@ section{padding:120px 0}
 .nav .wrap{display:flex; align-items:center; justify-content:space-between}
 
 /* ============ BRAND / LOGO STYLING ============ */
-.brand{
-  display:inline-flex; 
-  align-items:center; 
-  text-decoration:none;
+.brand {
+  display: inline-flex; 
+  align-items: center; 
+  text-decoration: none;
+  overflow: visible !important; /* Prevents container from clipping the scaled logo */
 }
 
-/* Clear transparent logo sizing */
-.brand img{
-  height:68px; /* High-impact logo size */
-  width:auto;  
-  object-fit:contain;
-  display:block;
-  transition:height .35s var(--ease);
+/* Force scaling directly on the image element */
+.brand img {
+  height: 60px !important;            /* Base size */
+  max-height: none !important;        /* Removes any global framework caps */
+  width: auto !important;             /* Maintains aspect ratio */
+  object-fit: contain;
+  display: block;
+  transform: scale(1.65);            /* Inflatest the logo visually by 65% */
+  transform-origin: left center;      /* Keeps it anchored nicely to the left edge */
+  transition: transform .35s var(--ease);
 }
 
-/* Compact on scroll */
-.nav.scrolled .brand img{
-  height:52px;
+/* Slightly smaller scale on scroll so it stays neat */
+.nav.scrolled .brand img {
+  transform: scale(1.35);
 }
-
 /* ============ NAV LINKS & BUTTONS ============ */
 .nav-links{display:flex; align-items:center; gap:38px}
 .nav-links a{font-size:13.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--text-mute); position:relative; transition:color .25s}
