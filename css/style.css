@@ -415,3 +415,99 @@ footer{border-top:1px solid var(--line); padding:70px 0 36px}
     gap: 12px;
   }
 }
+/* ============ CLARITY SECTION STYLING ============ */
+.clarity-section {
+  padding: 90px 0;
+  background: var(--bg, #0B0F19);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.clarity-header {
+  max-width: 780px;
+  margin-bottom: 54px;
+}
+
+.clarity-header .tagline {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-2, #D4AF37);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.clarity-header h2 {
+  font-family: var(--font-display, serif);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.2;
+  color: var(--text, #F2EEE2);
+  margin-bottom: 18px;
+}
+
+.clarity-header h2 span {
+  color: var(--text-mute, #94A3B8);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.clarity-sub {
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--text-mute, #A0AEC0);
+}
+
+.clarity-sub strong {
+  color: var(--text, #F2EEE2);
+}
+
+/* Card Grid Layout */
+.clarity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.clarity-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius, 8px);
+  padding: 32px;
+  transition: all 0.3s var(--ease, ease);
+}
+
+.clarity-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(212, 175, 55, 0.3); /* Subtle gold accent border on hover */
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.clarity-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text, #F2EEE2);
+  margin-bottom: 10px;
+}
+
+.clarity-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-mute, #94A3B8);
+}
+
+/* Responsive Rules for Mobile */
+@media (max-width: 768px) {
+  .clarity-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .clarity-card {
+    padding: 24px;
+  }
+}
