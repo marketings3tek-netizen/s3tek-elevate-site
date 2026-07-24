@@ -10,19 +10,19 @@
 
   <!-- Core Pages -->
   <url>
-    <loc>https://elevate.s3tekcorp.in/about.html</loc>
+    <loc>https://elevate.s3tekcorp.in/</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevate.s3tekcorp.in/work.html</loc>
+    <loc>https://elevate.s3tekcorp.in/</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevate.s3tekcorp.in/pricing.html</loc>
+    <loc>https://elevate.s3tekcorp.in/</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -30,13 +30,13 @@
 
   <!-- Frameworks / Special Pages -->
   <url>
-    <loc>https://elevate.s3tekcorp.in/xare.html</loc>
+    <loc>https://elevate.s3tekcorp.in/</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevate.s3tekcorp.in/tensor.html</loc>
+    <loc>https://elevate.s3tekcorp.in/</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -44,13 +44,13 @@
 
   <!-- Content & Contact -->
   <url>
-    <loc>https://elevate.s3tekcorp.in/blog.html</loc>
+    <loc>https://elevate.s3tekcorp.in/blog</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevate.s3tekcorp.in/contact.html</loc>
+    <loc>https://elevate.s3tekcorp.in/contact</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
