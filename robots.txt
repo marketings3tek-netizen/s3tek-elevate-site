@@ -1,4 +1,5 @@
-User-agent: *
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://elevate.s3tekcorp.in/sitemap.xml
